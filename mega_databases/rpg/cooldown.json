@@ -1,0 +1,84 @@
+{
+  "854572979353813032": {
+    "720409038202077235": {
+      "cooldown": {
+        "diario": {
+          "tiene": 0,
+          "tiempo": 0,
+          "milis": 0
+        },
+        "semanal": {
+          "tiene": 0,
+          "tiempo": 0,
+          "milis": 0
+        },
+        "explorar": {
+          "tiene": 0,
+          "tiempo": 0,
+          "milis": 0
+        },
+        "zarpar": {
+          "tiene": 0,
+          "tiempo": 0,
+          "milis": 0
+        },
+        "pescar": {
+          "tiene": 0,
+          "tiempo": 0,
+          "milis": 0
+        },
+        "entrenar": {
+          "tiene": 0,
+          "tiempo": 0,
+          "milis": 0
+        }
+      }
+    },
+    "674758623204999168": {
+      "cooldown": {
+        "explorar": {
+          "tiene": 0,
+          "tiempo": 0
+        },
+        "pescar": {
+          "tiene": 0,
+          "tiempo": 0
+        },
+        "zarpar": {
+          "tiene": 1,
+          "tiempo": "0h 16m 12s"
+        },
+        "entrenar": {
+          "tiene": 1,
+          "tiempo": "11h 16m 22s"
+        }
+      }
+    },
+    "524743551456903168": {
+      "cooldown": {
+        "explorar": {
+          "tiene": 0,
+          "tiempo": 0
+        },
+        "semanal": {
+          "tiene": 1,
+          "milis": 601630321,
+          "tiempo": "6d 23h 7m 10s"
+        },
+        "diario": {
+          "milis": 83241197,
+          "tiene": 1,
+          "tiempo": "23h 7m 21s"
+        },
+        "pescar": {
+          "tiene": 0,
+          "tiempo": 0
+        },
+        "zarpar": {
+          "tiene": 1,
+          "tiempo": "0h 9m 45s"
+        }
+      }
+    }
+  }
+}

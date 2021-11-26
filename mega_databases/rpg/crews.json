@@ -1,0 +1,131 @@
+{
+  "854572979353813032": {
+    "781240266": {
+      "tripulacion": {
+        "nombre": "The Killers",
+        "nivel": 24,
+        "dinero": 2558361459,
+        "bandera": 0,
+        "ba": "",
+        "xp": 71727,
+        "maxp": 114013,
+        "jugadores": 5,
+        "boni": 4,
+        "prbo": 20,
+        "maxju": 120,
+        "estad": {
+          "at": 595,
+          "def": 623
+        },
+        "id": "781240266",
+        "tripu": [
+          "🍻 Gomez G. Denis 🍻",
+          "<:xp:912544939722833970>XP921<:xp:912544939722833970>",
+          "Nami <:namiberris:907114666700967996>",
+          "Denisse 🤪"
+        ],
+        "owner": "674758623204999168",
+        "ids": [
+          "720409038202077235",
+          "801829655534501899",
+          "524743551456903168",
+          "674758623204999168"
+        ],
+        "barco": {
+          "id": "674758623204999168",
+          "nombre": "Navio",
+          "capacidadmax": 10000000
+        },
+        "cantidad": 2207678,
+        "recursos": [
+          "**<:omushibi:882246321522741338> Omusubi:** 200200",
+          "**<:emoji_1:907978099436711936> Pez Asfur:** 4",
+          "**🐠 Pez Dorado:** 15",
+          "**🐟 Pez Azul:** 150",
+          "**<:carne:882244710649962526> Carne:** 105005",
+          "**🍣 Sushi:** 103",
+          "**🍭 Paletas:** 102201"
+        ],
+        "rcs": {
+          "omusubi": 200200,
+          "paleta": 102201,
+          "carne": 1005005,
+          "gomitas": 0,
+          "sushi": 103,
+          "manzana": 0,
+          "mandarina": 0,
+          "galleta": 0,
+          "pez1": 150,
+          "pez2": 15,
+          "pez3": 4,
+          "suna": 0,
+          "hebi1": 0,
+          "doru": 0,
+          "gasha": 0,
+          "yomi": 0,
+          "baku": 0,
+          "tori2": 0,
+          "bara": 0,
+          "sube": 0,
+          "bomu": 0,
+          "kiro": 0,
+          "hana": 0,
+          "moku": 0,
+          "ope": 0,
+          "kage": 0,
+          "mera": 0,
+          "tori1": 0,
+          "sara1": 0,
+          "mochi": 0,
+          "horo": 0,
+          "bane": 0,
+          "hie": 0,
+          "pika": 0,
+          "magu": 0,
+          "numa": 0,
+          "doku": 0,
+          "nikyu": 0,
+          "uzu": 0,
+          "tokaan": 0,
+          "kumi": 0,
+          "utsu": 0,
+          "gol": 0,
+          "mini": 0,
+          "noro": 0,
+          "gomu": 0,
+          "gura": 0,
+          "yami": 0,
+          "awa": 0,
+          "ushi1": 0,
+          "ito": 0,
+          "batto": 0,
+          "comun": 80,
+          "raro": 0,
+          "epico": 0,
+          "hyper": 0,
+          "legendary": 0
+        }
+      }
+    },
+    "881758502": {
+      "tripulacion": {
+        "nombre": "Los matadores",
+        "nivel": 0,
+        "bandera": 0,
+        "ba": "",
+        "xp": 93,
+        "maxp": 300,
+        "jugadores": 1,
+        "estad": {
+          "at": 22,
+          "def": 22
+        },
+        "id": "881758502",
+        "tripu": [
+          "El Matador Guerrero"
+        ],
+        "owner": "787919357438590997"
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "comida": {
+    "todo": [],
+    "carne": {
+      "valor": 100,
+      "vida": 40
+    },
+    "manzana": {
+      "valor": 10000,
+      "vida": 1000
+    }
+  }
+}
