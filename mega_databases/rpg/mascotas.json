@@ -1,0 +1,37 @@
+{
+  "854572979353813032": {
+    "674758623204999168": {
+      "pets": {
+        "tipo": "gato",
+        "nombre": "Anubis",
+        "nivel": 1,
+        "xp": 0,
+        "xpm": 200,
+        "tiempo": "20/11/2021",
+        "img": "https://cdn.discordapp.com/attachments/897291612655325264/911824574017044541/gato2.png"
+      }
+    },
+    "524743551456903168": {
+      "pets": {
+        "tipo": "lobo",
+        "nombre": "Ripi",
+        "nivel": 1,
+        "xp": 0,
+        "xpm": 200,
+        "tiempo": "20/11/2021",
+        "img": "https://cdn.discordapp.com/attachments/897291612655325264/911814778975060059/Sin_titulo-1.png"
+      }
+    },
+    "720409038202077235": {
+      "pets": {
+        "tipo": "zorro 9 colas",
+        "nombre": "Limón",
+        "nivel": 1,
+        "xp": 0,
+        "xpm": 200,
+        "tiempo": "20/11/2021",
+        "img": "https://cdn.discordapp.com/attachments/897291612655325264/911836879865909248/zorro_9_colas.png"
+      }
+    }
+  }
+}
