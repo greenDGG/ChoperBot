@@ -1,0 +1,333 @@
+{
+  "854572979353813032": {
+    "674758623204999168": {
+      "crew": {
+        "tripu": 1,
+        "nombre": "The Killers",
+        "id": "781240266"
+      },
+      "area": {
+        "mar": "East Blue",
+        "isla": "Shells Town",
+        "areas": "2",
+        "maxarea": 2
+      },
+      "perfil": {
+        "nombre": "🍻 Gomez G. Denis 🍻",
+        "rol": "<:SimboloHospital:901623144631128135> Doctor",
+        "navegante": 1,
+        "genero": "Hombre",
+        "bio": "fix\nSoy Denis, Programador de choper bot espero que lo disfrutes",
+        "cname": 1,
+        "haki1": 0,
+        "haki2": 0,
+        "haki3": 1
+      },
+      "progreso": {
+        "nivel": 34,
+        "xp": 60470,
+        "maxp": 102425,
+        "wanted": 20004042
+      },
+      "estadisticas": {
+        "energia": 5,
+        "maxenergia": 53,
+        "vida": 396,
+        "maxvida": 595,
+        "ataque": 146,
+        "defenza": 146
+      },
+      "equipo": {
+        "arma": 0,
+        "fruta": 27,
+        "barco": 13
+      },
+      "money": {
+        "dinero": 1345479,
+        "banco": 336870334719
+      }
+    },
+    "524743551456903168": {
+      "crew": {
+        "tripu": 1,
+        "nombre": "The Killers",
+        "id": "781240266"
+      },
+      "area": {
+        "mar": "East Blue",
+        "isla": "Shells Town",
+        "areas": "2",
+        "maxarea": 2
+      },
+      "perfil": {
+        "nombre": "<:xp:912544939722833970>XP921<:xp:912544939722833970>",
+        "rol": "🤖 Cyborg",
+        "navegante": 1,
+        "bio": "fix\nHola, yo soy XP921, Es un gusco conocerlo, espero seamos buenos amigos 😃",
+        "cname": 2,
+        "haki1": 0,
+        "haki2": 0,
+        "haki3": 0,
+        "genero": "Hombre"
+      },
+      "progreso": {
+        "nivel": 11,
+        "xp": 3014,
+        "maxp": 7205,
+        "wanted": 559073
+      },
+      "estadisticas": {
+        "energia": 23,
+        "maxenergia": 30,
+        "vida": 121,
+        "maxvida": 150,
+        "ataque": 150,
+        "defenza": 150
+      },
+      "equipo": {
+        "arma": 0,
+        "fruta": 31,
+        "barco": 1
+      },
+      "money": {
+        "dinero": 0,
+        "banco": 5491263761
+      }
+    },
+    "787919357438590997": {
+      "crew": {
+        "tripu": 1,
+        "nombre": "Los matadores",
+        "id": "881758502"
+      },
+      "area": {
+        "mar": "East Blue",
+        "isla": "Shells Town",
+        "areas": "1",
+        "maxarea": 1
+      },
+      "perfil": {
+        "nombre": "El Matador Guerrero",
+        "rol": "🔍 Arqueologo",
+        "navegante": 1,
+        "bio": "Denis es el mero mero papa",
+        "cname": 1,
+        "haki1": 0,
+        "haki2": 0,
+        "haki3": 0,
+        "genero": "Hombre"
+      },
+      "progreso": {
+        "nivel": 12,
+        "xp": 739,
+        "maxp": 1870,
+        "wanted": 51026
+      },
+      "estadisticas": {
+        "energia": 1,
+        "maxenergia": 31,
+        "vida": 155,
+        "maxvida": 155,
+        "ataque": 22,
+        "defenza": 22
+      },
+      "equipo": {
+        "arma": 0,
+        "fruta": 0,
+        "barco": 0
+      },
+      "money": {
+        "dinero": 3908,
+        "banco": 213426227
+      }
+    },
+    "801829655534501899": {
+      "crew": {
+        "tripu": 1,
+        "nombre": "The Killers",
+        "id": "781240266"
+      },
+      "area": {
+        "mar": "East Blue",
+        "isla": "Shells Town",
+        "areas": "2",
+        "maxarea": 2
+      },
+      "perfil": {
+        "nombre": "Denisse 🤪",
+        "rol": "🤖 Cyborg",
+        "navegante": 1,
+        "bio": "Sin Biografia",
+        "cname": 0,
+        "haki1": 0,
+        "haki2": 0,
+        "haki3": 0,
+        "genero": "Mujer"
+      },
+      "progreso": {
+        "nivel": 13,
+        "xp": 1982,
+        "maxp": 2365,
+        "wanted": 56233
+      },
+      "estadisticas": {
+        "energia": 3,
+        "maxenergia": 32,
+        "vida": 82,
+        "maxvida": 160,
+        "ataque": 72,
+        "defenza": 96
+      },
+      "equipo": {
+        "arma": 0,
+        "fruta": 0,
+        "barco": 0
+      },
+      "money": {
+        "dinero": 700712,
+        "banco": 220905118
+      }
+    },
+    "800170369084293150": {
+      "crew": {
+        "tripu": 0,
+        "nombre": "",
+        "id": ""
+      },
+      "area": {
+        "mar": "West Blue",
+        "isla": "Jumpfoot",
+        "areas": "1",
+        "maxarea": 1
+      },
+      "perfil": {
+        "nombre": "Aku-San",
+        "navegante": 1,
+        "rol": "<:SimboloHospital:901623144631128135> Doctora",
+        "bio": "Sin Biografia",
+        "cname": 0,
+        "haki1": 0,
+        "haki2": 0,
+        "haki3": 0,
+        "genero": "Mujer"
+      },
+      "progreso": {
+        "nivel": 1,
+        "xp": 28,
+        "maxp": 180,
+        "wanted": 0
+      },
+      "estadisticas": {
+        "energia": 17,
+        "maxenergia": 20,
+        "vida": 99,
+        "maxvida": 100,
+        "ataque": 0,
+        "defenza": 0
+      },
+      "equipo": {
+        "arma": 0,
+        "fruta": 0,
+        "barco": 0
+      },
+      "money": {
+        "dinero": 0,
+        "banco": 0
+      }
+    },
+    "910889875773984768": {
+      "crew": {
+        "tripu": 1,
+        "nombre": "The Killers",
+        "id": "781240266"
+      },
+      "area": {
+        "mar": "East Blue",
+        "isla": "Dawn Island",
+        "areas": "2",
+        "maxarea": 2
+      },
+      "perfil": {
+        "nombre": "Nami <:namiberris:907114666700967996>",
+        "rol": "🧭 Navegante",
+        "navegante": 3,
+        "bio": "Sin Biografia",
+        "cname": 0,
+        "haki1": 0,
+        "haki2": 0,
+        "haki3": 1,
+        "genero": "Mujer"
+      },
+      "progreso": {
+        "nivel": 22,
+        "xp": 6849,
+        "maxp": 26470,
+        "wanted": 174671
+      },
+      "estadisticas": {
+        "energia": 34,
+        "maxenergia": 41,
+        "vida": 114,
+        "maxvida": 205,
+        "ataque": 50,
+        "defenza": 50
+      },
+      "equipo": {
+        "arma": 0,
+        "fruta": 0,
+        "barco": 1
+      },
+      "money": {
+        "dinero": 0,
+        "banco": 40609378252
+      }
+    },
+    "720409038202077235": {
+      "crew": {
+        "tripu": 0,
+        "nombre": "",
+        "id": ""
+      },
+      "area": {
+        "mar": "West Blue",
+        "isla": "Jumpfoot",
+        "areas": "1",
+        "maxarea": 1
+      },
+      "perfil": {
+        "nombre": "Murify D. Trax",
+        "rol": "🤖 Cyborg",
+        "navegante": "1",
+        "bio": "Sin Biografia",
+        "cname": 0,
+        "haki1": 0,
+        "haki2": 0,
+        "haki3": 0,
+        "genero": "Hombre"
+      },
+      "progreso": {
+        "nivel": 1,
+        "xp": 0,
+        "maxp": 180,
+        "wanted": 0
+      },
+      "estadisticas": {
+        "energia": 20,
+        "maxenergia": 20,
+        "vida": 100,
+        "maxvida": 100,
+        "ataque": 0,
+        "defenza": 0
+      },
+      "equipo": {
+        "arma": 0,
+        "fruta": 0,
+        "barco": 0
+      },
+      "money": {
+        "dinero": 10000,
+        "banco": 0
+      }
+    }
+  }
+}
