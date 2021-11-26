@@ -1,0 +1,25 @@
+{
+    "854572979353813032": {
+        "674758623204999168": {
+            "ataques": [
+                "Ghost Rap: atk",
+                "Mini Hollow: atk",
+                "Negative wall: def",
+                "Ghost mode: def"
+            ]
+        },
+        "801829655534501899": {
+            "ataques": [
+                "Spiderweb: def",
+                "Stitched feedback: reg",
+                "Celestial Threads: atk",
+                "Thermal Thread: atk"
+            ]
+        },
+        "524743551456903168": {
+            "ataques": [
+            ]
+        }
+        
+    }
+}

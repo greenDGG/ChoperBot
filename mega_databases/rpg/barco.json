@@ -1,0 +1,14 @@
+{
+    "854572979353813032": {
+        "123456":{
+            "barco":{
+                "id": "674758623204999168",
+                "nombre": "Balsa",
+                "cantidad": "0",
+                "capacidadmax": "4",
+                "maxjugadores": "4",
+                "recursos": []
+            }
+        }
+    }
+}
