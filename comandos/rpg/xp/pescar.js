@@ -64,7 +64,7 @@ async execute (client, message, args){
   
   if(weekday === 0){xx.push(1)}
   if(weekday === 6){xx.push(1)}
-    let time = `${xx}` === '1'?150000:300000;
+    let time = `${xx}` === '1'?150000:0;
 
 //cd{    
    if (cooldown.has(`${message.author.id}.explorar`)) {
@@ -113,9 +113,6 @@ let tiene = await inventario.obtener(`854572979353813032.${message.author.id}.co
 let area = await perfil.obtener(`854572979353813032.${message.author.id}.area.areas`)
 if(tiene === 0){return message.channel.send(name+', Necesitas una caña de pescar.\nComprala en la tienda')}
 let n = await perfil.obtener(`854572979353813032.${message.author.id}.perfil.navegante`)
-
-//area 1
-if(area === '1'){
 let plus;
 let p
 let suerte;
@@ -146,6 +143,9 @@ switch(tiene){
     suerte = 1
     break
 }
+//area 1
+if(area === '1'){
+
 let fush = Math.floor(Math.random() * 4) + 1 + plus*n
 let fish = Math.floor(Math.random() * 1) + 1 + p*n
 let rollfish = Math.floor(Math.random() * 100) - suerte
@@ -183,36 +183,7 @@ inventario.push(`854572979353813032.${message.author.id}.inventarioc`, `**🐟 P
 
 //area2
 if(area === '2'){
-  let plus;
-  let p
-  let suerte;
-  switch(tiene){
-    case 5:
-      plus = 5
-      p = 4
-      suerte = 25
-      break
-    case 4:
-      plus = 3
-      p = 3
-      suerte = 10
-      break
-    case 3:
-      plus = 2
-      p = 0
-      suerte = 5
-      break
-    case 2:
-      plus = 1
-      p = 0
-      suerte = 3
-      break
-    case 1:
-      plus = 0
-      p = 0
-      suerte = 1
-      break
-  }
+ 
   let fush = Math.floor(Math.random() * 6) + 1 + plus *n
   let fish = Math.floor(Math.random() * 2) + 1 + p*n
   let pez3 =  Math.floor(Math.random() * 2) + 1*n
@@ -259,67 +230,40 @@ if(area === '2'){
   }
 //area3
 if(area === '3'){
-  let plus;
-  let p
-  let suerte;
-  switch(tiene){
-    case 5:
-      plus = 5
-      p = 4
-      suerte = 25
-      break
-    case 4:
-      plus = 3
-      p = 3
-      suerte = 10
-      break
-    case 3:
-      plus = 2
-      p = 0
-      suerte = 5
-      break
-    case 2:
-      plus = 1
-      p = 0
-      suerte = 3
-      break
-    case 1:
-      plus = 0
-      p = 0
-      suerte = 1
-      break
-  }
-  let fush = Math.floor(Math.random() * 6) + 1 + plus *n
-  let fish = Math.floor(Math.random() * 2) + 1 + p*n
+ 
+  let pez1 = Math.floor(Math.random() * 6) + 1 + plus *n
+  let pez2 = Math.floor(Math.random() * 2) + 1 + p*n
   let pez3 =  Math.floor(Math.random() * 2) + 1*n
   let rollfish = Math.floor(Math.random() * 100) - suerte
   if(rollfish <= 10) {
-    message.channel.send(`**${name}**, atrapaste ${`${xx}` === '1'?pez3*2:pez3} ${pez3 > 1?' <:emoji_1:907978099436711936> peces payasos':' <:emoji_1:907978099436711936> pez payaso'}`);
+    message.channel.send(`**${name}**, atrapaste +**${`${xx}` === '1'?pez3*2:pez3} ${pez3 > 1?' peces chirlens <:children:908181688658563093>':' pez chirlen <:children:908181688658563093>'}**`);
     let p2 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez4`)
-    if(p2 === 0){inventario.push(`854572979353813032.${message.author.id}.inventarioc`, '**<:emoji_1:907978099436711936> Pez Payaso:** 0')}
-    inventario.extract(`854572979353813032.${message.author.id}.inventarioc`, `**<:emoji_1:907978099436711936> Pez Payaso:** ${p2}`)
+    if(p2 === 0){inventario.push(`854572979353813032.${message.author.id}.inventarioc`, '**<:children:908181688658563093> Pez Chirlen:** 0')}
+    inventario.extract(`854572979353813032.${message.author.id}.inventarioc`, `**<:children:908181688658563093> Pez Chirlen:** ${p2}`)
     inventario.sumar(`854572979353813032.${message.author.id}.comida.pez3`, `${xx}` === '1'?pez3*2:pez3)
     let p22 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez4`)
-    inventario.push(`854572979353813032.${message.author.id}.inventarioc`, `**<:emoji_1:907978099436711936> Pez Payaso:** ${p22}`)
+    inventario.push(`854572979353813032.${message.author.id}.inventarioc`, `**<:children:908181688658563093> Pez Chirlen:** ${p22}`)
+   
     return 
   }else if(rollfish <= 20){
-    message.channel.send(`**${name}**, atrapaste ${`${xx}` === '1'?pez3*2:pez3} ${pez3 > 1?' <:emoji_1:907978099436711936> peces asfur':' <:emoji_1:907978099436711936> pez asfur'}`);
+    message.channel.send(`**${name}**, atrapaste +**${`${xx}` === '1'?pez2*2:pez2} ${pez2 > 1?' peces asfur <:emoji_1:907978099436711936>':' pez asfur <:emoji_1:907978099436711936>'}**`);
     let p2 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez3`)
     if(p2 === 0){inventario.push(`854572979353813032.${message.author.id}.inventarioc`, '**<:emoji_1:907978099436711936> Pez Asfur:** 0')}
     inventario.extract(`854572979353813032.${message.author.id}.inventarioc`, `**<:emoji_1:907978099436711936> Pez Asfur:** ${p2}`)
-    inventario.sumar(`854572979353813032.${message.author.id}.comida.pez3`, `${xx}` === '1'?pez3*2:pez3)
+    inventario.sumar(`854572979353813032.${message.author.id}.comida.pez3`, `${xx}` === '1'?pez2*2:pez2)
     let p22 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez3`)
     inventario.push(`854572979353813032.${message.author.id}.inventarioc`, `**<:emoji_1:907978099436711936> Pez Asfur:** ${p22}`)
-    
+   
   return 
   }
-  message.channel.send(`**${name}**, atrapaste ${`${xx}` === '1'?fish*2:fish} ${fish > 1?' :tropical_fish: peces dorado':' :tropical_fish: pez dorado'}`);
+  message.channel.send(`**${name}**, atrapaste +**${`${xx}` === '1'?fish*2:pez1} ${pez1 > 1?' peces dorado :tropical_fish:':' pez dorado :tropical_fish:'}**`);
   let p2 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez2`)
   if(p2 === 0){inventario.push(`854572979353813032.${message.author.id}.inventarioc`, '**🐠 Pez Dorado:** 0')}
   inventario.extract(`854572979353813032.${message.author.id}.inventarioc`, `**🐠 Pez Dorado:** ${p2}`)
-  inventario.sumar(`854572979353813032.${message.author.id}.comida.pez2`, `${xx}` === '1'?fish*2:fish)
+  inventario.sumar(`854572979353813032.${message.author.id}.comida.pez2`, `${xx}` === '1'?pez1*2:pez1)
   let p22 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez2`)
   inventario.push(`854572979353813032.${message.author.id}.inventarioc`, `**🐠 Pez Dorado:** ${p22}`)
+ 
 
   //misiones
 
@@ -333,7 +277,115 @@ if(area === '3'){
     misiones.sumar(`854572979353813032.${message.author.id}.misiones.pr`, fush)
   
 }
-  }  
+}
+//area4
+if(area === '4'){
+ 
+  let pez1 = Math.floor(Math.random() * 6) + 1 + plus *n
+  let pez2 = Math.floor(Math.random() * 2) + 1 + p*n
+  let pez3 =  Math.floor(Math.random() * 2) + 1*n
+  let rollfish = Math.floor(Math.random() * 100) - suerte
+  if(rollfish <= 10) {
+    message.channel.send(`**${name}**, atrapaste +**${`${xx}` === '1'?pez3*2:pez3} ${pez3 > 1?' peces payasos <:payaso:912309933792456754>':' pez payaso <:payaso:912309933792456754>'}**`);
+    let p2 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez5`)
+    if(p2 === 0){inventario.push(`854572979353813032.${message.author.id}.inventarioc`, '**<:payaso:912309933792456754> Pez Payaso:** 0')}
+    inventario.extract(`854572979353813032.${message.author.id}.inventarioc`, `**<:payaso:912309933792456754> Pez Payaso:** ${p2}`)
+    inventario.sumar(`854572979353813032.${message.author.id}.comida.pez5`, `${xx}` === '1'?pez3*2:pez3)
+    let p22 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez5`)
+    inventario.push(`854572979353813032.${message.author.id}.inventarioc`, `**<:payaso:912309933792456754> Pez Payaso:** ${p22}`)
+   
+    
+    return 
+  }else if(rollfish <= 20){
+    message.channel.send(`**${name}**, atrapaste +**${`${xx}` === '1'?pez2*2:pez2} ${pez2 > 1?' peces chirlens <:children:908181688658563093>':' pez chirlen <:children:908181688658563093>'}**`);
+    let p2 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez4`)
+    if(p2 === 0){inventario.push(`854572979353813032.${message.author.id}.inventarioc`, '**<:children:908181688658563093> Pez Chirlen:** 0')}
+    inventario.extract(`854572979353813032.${message.author.id}.inventarioc`, `**<:children:908181688658563093> Pez Chirlen:** ${p2}`)
+    inventario.sumar(`854572979353813032.${message.author.id}.comida.pez4`, `${xx}` === '1'?pez2*2:pez2)
+    let p22 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez4`)
+    inventario.push(`854572979353813032.${message.author.id}.inventarioc`, `**<:children:908181688658563093> Pez Chirlen:** ${p22}`)
+   
+    
+  return 
+  }
+  message.channel.send(`**${name}**, atrapaste +**${`${xx}` === '1'?pez1*2:pez1} ${pez1 > 1?' peces asfur <:emoji_1:907978099436711936>':' pez asfur <:emoji_1:907978099436711936>'}**`);
+    let p2 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez3`)
+    if(p2 === 0){inventario.push(`854572979353813032.${message.author.id}.inventarioc`, '**<:emoji_1:907978099436711936> Pez Asfur:** 0')}
+    inventario.extract(`854572979353813032.${message.author.id}.inventarioc`, `**<:emoji_1:907978099436711936> Pez Asfur:** ${p2}`)
+    inventario.sumar(`854572979353813032.${message.author.id}.comida.pez3`, `${xx}` === '1'?pez1*2:pez1)
+    let p22 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez3`)
+    inventario.push(`854572979353813032.${message.author.id}.inventarioc`, `**<:emoji_1:907978099436711936> Pez Asfur:** ${p22}`)
+   
+  
+ 
+
+  //misiones
+
+  let tiee = await misiones.obtener(`854572979353813032.${message.author.id}.misiones.tiene`)
+  let id = await misiones.obtener(`854572979353813032.${message.author.id}.misiones.idm`)
+  if(tiee === 0){return}
+
+  if(id === 2){
+    let pr = await misiones.obtener(`854572979353813032.${message.author.id}.misiones.pr`)
+    if(pr >= 5){return}
+    misiones.sumar(`854572979353813032.${message.author.id}.misiones.pr`, fush)
+  
+}
+}
+//area4
+if(area === '4'){
+ 
+  let pez1 = Math.floor(Math.random() * 6) + 1 + plus *n
+  let pez2 = Math.floor(Math.random() * 2) + 1 + p*n
+  let pez3 =  Math.floor(Math.random() * 2) + 1*n
+  let rollfish = Math.floor(Math.random() * 100) - suerte
+  if(rollfish <= 10) {
+    message.channel.send(`**${name}**, atrapaste +**${`${xx}` === '1'?pez3*2:pez3} ${pez3 > 1?' peces payasos <:payaso:912309933792456754>':' pez payaso <:payaso:912309933792456754>'}**`);
+    let p2 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez5`)
+    if(p2 === 0){inventario.push(`854572979353813032.${message.author.id}.inventarioc`, '**<:payaso:912309933792456754> Pez Payaso:** 0')}
+    inventario.extract(`854572979353813032.${message.author.id}.inventarioc`, `**<:payaso:912309933792456754> Pez Payaso:** ${p2}`)
+    inventario.sumar(`854572979353813032.${message.author.id}.comida.pez5`, `${xx}` === '1'?pez3*2:pez3)
+    let p22 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez5`)
+    inventario.push(`854572979353813032.${message.author.id}.inventarioc`, `**<:payaso:912309933792456754> Pez Payaso:** ${p22}`)
+   
+    
+    return 
+  }else if(rollfish <= 20){
+    message.channel.send(`**${name}**, atrapaste +**${`${xx}` === '1'?pez2*2:pez2} ${pez2 > 1?' peces chirlens <:children:908181688658563093>':' pez chirlen <:children:908181688658563093>'}**`);
+    let p2 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez4`)
+    if(p2 === 0){inventario.push(`854572979353813032.${message.author.id}.inventarioc`, '**<:children:908181688658563093> Pez Chirlen:** 0')}
+    inventario.extract(`854572979353813032.${message.author.id}.inventarioc`, `**<:children:908181688658563093> Pez Chirlen:** ${p2}`)
+    inventario.sumar(`854572979353813032.${message.author.id}.comida.pez4`, `${xx}` === '1'?pez2*2:pez2)
+    let p22 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez4`)
+    inventario.push(`854572979353813032.${message.author.id}.inventarioc`, `**<:children:908181688658563093> Pez Chirlen:** ${p22}`)
+   
+    
+  return 
+  }
+  message.channel.send(`**${name}**, atrapaste +**${`${xx}` === '1'?pez1*2:pez1} ${pez1 > 1?' peces asfur <:emoji_1:907978099436711936>':' pez asfur <:emoji_1:907978099436711936>'}**`);
+    let p2 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez3`)
+    if(p2 === 0){inventario.push(`854572979353813032.${message.author.id}.inventarioc`, '**<:emoji_1:907978099436711936> Pez Asfur:** 0')}
+    inventario.extract(`854572979353813032.${message.author.id}.inventarioc`, `**<:emoji_1:907978099436711936> Pez Asfur:** ${p2}`)
+    inventario.sumar(`854572979353813032.${message.author.id}.comida.pez3`, `${xx}` === '1'?pez1*2:pez1)
+    let p22 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez3`)
+    inventario.push(`854572979353813032.${message.author.id}.inventarioc`, `**<:emoji_1:907978099436711936> Pez Asfur:** ${p22}`)
+   
+  
+ 
+
+  //misiones
+
+  let tiee = await misiones.obtener(`854572979353813032.${message.author.id}.misiones.tiene`)
+  let id = await misiones.obtener(`854572979353813032.${message.author.id}.misiones.idm`)
+  if(tiee === 0){return}
+
+  if(id === 2){
+    let pr = await misiones.obtener(`854572979353813032.${message.author.id}.misiones.pr`)
+    if(pr >= 5){return}
+    misiones.sumar(`854572979353813032.${message.author.id}.misiones.pr`, fush)
+  
+}
+}
 
  }
 
