@@ -7,6 +7,11 @@ const inventario = new db.crearDB('inventario', 'rpg')
 const cd = new db.crearDB('cooldown', 'rpg')
 const cooldown = new Discord.Collection();
 const { convertMS } = require("discordutility");
+const { area1 } = require("../pescar/area1")
+const { area2 } = require("../pescar/area2")
+const { area3 } = require("../pescar/area3")
+const { area4 } = require("../pescar/area4")
+
 module.exports = {
   name: "pescar", 
   alias: ["fish"], 
@@ -144,196 +149,15 @@ switch(tiene){
     break
 }
 //area 1
-if(area === '1'){
-
-let fush = Math.floor(Math.random() * 4) + 1 + plus*n
-let fish = Math.floor(Math.random() * 1) + 1 + p*n
-let rollfish = Math.floor(Math.random() * 100) - suerte
-if(rollfish <= 10) {
-  message.channel.send(`**${name}**, atrapaste +**${`${xx}` === '1'?fish*2:fish} ${fish > 1?' peces dorado :tropical_fish:':' pez dorado :tropical_fish:'}**`);
-  let p2 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez2`)
-  if(p2 === 0){inventario.push(`854572979353813032.${message.author.id}.inventarioc`, '**🐠 Pez Dorado:** 0')}
-  inventario.extract(`854572979353813032.${message.author.id}.inventarioc`, `**🐠 Pez Dorado:** ${p2}`)
-  inventario.sumar(`854572979353813032.${message.author.id}.comida.pez2`, `${xx}` === '1'?fish*2:fish)
-  let p22 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez2`)
-  inventario.push(`854572979353813032.${message.author.id}.inventarioc`, `**🐠 Pez Dorado:** ${p22}`)
-  return 
-}
-message.channel.send(`**${name}**, atrapaste +**${`${xx}` === '1'?fush*2:fush} ${fush > 1?' peces azules :fish:':' pez azul :fish:'}**`)
-let p1 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez1`)
-if(p1 === 0){inventario.push(`854572979353813032.${message.author.id}.inventarioc`, '**🐟 Pez Azul:** 0')}
-inventario.extract(`854572979353813032.${message.author.id}.inventarioc`, `**🐟 Pez Azul:** ${p1}`)
-inventario.sumar(`854572979353813032.${message.author.id}.comida.pez1`, `${xx}` === '1'?fush*2:fush)
-let p11 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez1`)
-inventario.push(`854572979353813032.${message.author.id}.inventarioc`, `**🐟 Pez Azul:** ${p11}`)
-
-//misiones
-
-  let tiee = await misiones.obtener(`854572979353813032.${message.author.id}.misiones.tiene`)
-  let id = await misiones.obtener(`854572979353813032.${message.author.id}.misiones.idm`)
-  if(tiee === 0){return}
-
-  if(id === 2){
-    let pr = await misiones.obtener(`854572979353813032.${message.author.id}.misiones.pr`)
-    if(pr >= 5){return}
-    misiones.sumar(`854572979353813032.${message.author.id}.misiones.pr`, fush)
-  
-}
-}
-
+if(area === '1'){area1(message, xx, name, tiene, n, plus, p, suerte)}
 //area2
-if(area === '2'){
- 
-  let fush = Math.floor(Math.random() * 6) + 1 + plus *n
-  let fish = Math.floor(Math.random() * 2) + 1 + p*n
-  let pez3 =  Math.floor(Math.random() * 2) + 1*n
-  let rollfish = Math.floor(Math.random() * 100) - suerte
-  if(rollfish <= 10) {
-    message.channel.send(`**${name}**, atrapaste +**${`${xx}` === '1'?pez3*2:pez3} ${pez3 > 1?' peces asfur <:emoji_1:907978099436711936>':' pez asfur <:emoji_1:907978099436711936>'}**`);
-    let p2 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez3`)
-    if(p2 === 0){inventario.push(`854572979353813032.${message.author.id}.inventarioc`, '**<:emoji_1:907978099436711936> Pez Asfur:** 0')}
-    inventario.extract(`854572979353813032.${message.author.id}.inventarioc`, `**<:emoji_1:907978099436711936> Pez Asfur:** ${p2}`)
-    inventario.sumar(`854572979353813032.${message.author.id}.comida.pez3`, `${xx}` === '1'?pez3*2:pez3)
-    let p22 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez3`)
-    inventario.push(`854572979353813032.${message.author.id}.inventarioc`, `**<:emoji_1:907978099436711936> Pez Asfur:** ${p22}`)
-    return 
-  }else if(rollfish <= 20){
-    message.channel.send(`**${name}**, atrapaste +**${`${xx}` === '1'?fish*2:fish} ${fish > 1?' peces dorado :tropical_fish:':' pez dorado :tropical_fish:'}**`);
-  let p2 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez2`)
-  if(p2 === 0){inventario.push(`854572979353813032.${message.author.id}.inventarioc`, '**🐠 Pez Dorado:** 0')}
-  inventario.extract(`854572979353813032.${message.author.id}.inventarioc`, `**🐠 Pez Dorado:** ${p2}`)
-  inventario.sumar(`854572979353813032.${message.author.id}.comida.pez2`, `${xx}` === '1'?fish*2:fish)
-  let p22 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez2`)
-  inventario.push(`854572979353813032.${message.author.id}.inventarioc`, `**🐠 Pez Dorado:** ${p22}`)
-  return 
-  }
-  message.channel.send(`**${name}**, atrapaste +**${`${xx}` === '1'?fush*2:fush} ${fush > 1?' peces azules :fish:':' pez azu :fish:l'}**`)
-  let p1 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez1`)
-  if(p1 === 0){inventario.push(`854572979353813032.${message.author.id}.inventarioc`, '**🐟 Pez Azul:** 0')}
-  inventario.extract(`854572979353813032.${message.author.id}.inventarioc`, `**🐟 Pez Azul:** ${p1}`)
-  inventario.sumar(`854572979353813032.${message.author.id}.comida.pez1`, `${xx}` === '1'?fush*2:fush)
-  let p11 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez1`)
-  inventario.push(`854572979353813032.${message.author.id}.inventarioc`, `**🐟 Pez Azul:** ${p11}`)
-
-  //misiones
-
-  let tiee = await misiones.obtener(`854572979353813032.${message.author.id}.misiones.tiene`)
-  let id = await misiones.obtener(`854572979353813032.${message.author.id}.misiones.idm`)
-  if(tiee === 0){return}
-
-  if(id === 2){
-    let pr = await misiones.obtener(`854572979353813032.${message.author.id}.misiones.pr`)
-    if(pr >= 5){return}
-    misiones.sumar(`854572979353813032.${message.author.id}.misiones.pr`, fush)
-  
-}
-  }
+if(area === '2'){area2(message, xx, name, tiene, n, plus, p, suerte)}
 //area3
-if(area === '3'){
- 
-  let pez1 = Math.floor(Math.random() * 6) + 1 + plus *n
-  let pez2 = Math.floor(Math.random() * 2) + 1 + p*n
-  let pez3 =  Math.floor(Math.random() * 2) + 1*n
-  let rollfish = Math.floor(Math.random() * 100) - suerte
-  if(rollfish <= 10) {
-    message.channel.send(`**${name}**, atrapaste +**${`${xx}` === '1'?pez3*2:pez3} ${pez3 > 1?' peces chirlens <:children:908181688658563093>':' pez chirlen <:children:908181688658563093>'}**`);
-    let p2 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez4`)
-    if(p2 === 0){inventario.push(`854572979353813032.${message.author.id}.inventarioc`, '**<:children:908181688658563093> Pez Chirlen:** 0')}
-    inventario.extract(`854572979353813032.${message.author.id}.inventarioc`, `**<:children:908181688658563093> Pez Chirlen:** ${p2}`)
-    inventario.sumar(`854572979353813032.${message.author.id}.comida.pez3`, `${xx}` === '1'?pez3*2:pez3)
-    let p22 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez4`)
-    inventario.push(`854572979353813032.${message.author.id}.inventarioc`, `**<:children:908181688658563093> Pez Chirlen:** ${p22}`)
-   
-    return 
-  }else if(rollfish <= 20){
-    message.channel.send(`**${name}**, atrapaste +**${`${xx}` === '1'?pez2*2:pez2} ${pez2 > 1?' peces asfur <:emoji_1:907978099436711936>':' pez asfur <:emoji_1:907978099436711936>'}**`);
-    let p2 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez3`)
-    if(p2 === 0){inventario.push(`854572979353813032.${message.author.id}.inventarioc`, '**<:emoji_1:907978099436711936> Pez Asfur:** 0')}
-    inventario.extract(`854572979353813032.${message.author.id}.inventarioc`, `**<:emoji_1:907978099436711936> Pez Asfur:** ${p2}`)
-    inventario.sumar(`854572979353813032.${message.author.id}.comida.pez3`, `${xx}` === '1'?pez2*2:pez2)
-    let p22 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez3`)
-    inventario.push(`854572979353813032.${message.author.id}.inventarioc`, `**<:emoji_1:907978099436711936> Pez Asfur:** ${p22}`)
-   
-  return 
-  }
-  message.channel.send(`**${name}**, atrapaste +**${`${xx}` === '1'?fish*2:pez1} ${pez1 > 1?' peces dorado :tropical_fish:':' pez dorado :tropical_fish:'}**`);
-  let p2 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez2`)
-  if(p2 === 0){inventario.push(`854572979353813032.${message.author.id}.inventarioc`, '**🐠 Pez Dorado:** 0')}
-  inventario.extract(`854572979353813032.${message.author.id}.inventarioc`, `**🐠 Pez Dorado:** ${p2}`)
-  inventario.sumar(`854572979353813032.${message.author.id}.comida.pez2`, `${xx}` === '1'?pez1*2:pez1)
-  let p22 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez2`)
-  inventario.push(`854572979353813032.${message.author.id}.inventarioc`, `**🐠 Pez Dorado:** ${p22}`)
- 
-
-  //misiones
-
-  let tiee = await misiones.obtener(`854572979353813032.${message.author.id}.misiones.tiene`)
-  let id = await misiones.obtener(`854572979353813032.${message.author.id}.misiones.idm`)
-  if(tiee === 0){return}
-
-  if(id === 2){
-    let pr = await misiones.obtener(`854572979353813032.${message.author.id}.misiones.pr`)
-    if(pr >= 5){return}
-    misiones.sumar(`854572979353813032.${message.author.id}.misiones.pr`, fush)
-  
-}
-}
+if(area === '3'){area3(message, xx, name, tiene, n, plus, p, suerte)}
 //area4
-if(area === '4'){
- 
-  let pez1 = Math.floor(Math.random() * 6) + 1 + plus *n
-  let pez2 = Math.floor(Math.random() * 2) + 1 + p*n
-  let pez3 =  Math.floor(Math.random() * 2) + 1*n
-  let rollfish = Math.floor(Math.random() * 100) - suerte
-  if(rollfish <= 10) {
-    message.channel.send(`**${name}**, atrapaste +**${`${xx}` === '1'?pez3*2:pez3} ${pez3 > 1?' peces payasos <:payaso:912309933792456754>':' pez payaso <:payaso:912309933792456754>'}**`);
-    let p2 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez5`)
-    if(p2 === 0){inventario.push(`854572979353813032.${message.author.id}.inventarioc`, '**<:payaso:912309933792456754> Pez Payaso:** 0')}
-    inventario.extract(`854572979353813032.${message.author.id}.inventarioc`, `**<:payaso:912309933792456754> Pez Payaso:** ${p2}`)
-    inventario.sumar(`854572979353813032.${message.author.id}.comida.pez5`, `${xx}` === '1'?pez3*2:pez3)
-    let p22 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez5`)
-    inventario.push(`854572979353813032.${message.author.id}.inventarioc`, `**<:payaso:912309933792456754> Pez Payaso:** ${p22}`)
-   
-    
-    return 
-  }else if(rollfish <= 20){
-    message.channel.send(`**${name}**, atrapaste +**${`${xx}` === '1'?pez2*2:pez2} ${pez2 > 1?' peces chirlens <:children:908181688658563093>':' pez chirlen <:children:908181688658563093>'}**`);
-    let p2 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez4`)
-    if(p2 === 0){inventario.push(`854572979353813032.${message.author.id}.inventarioc`, '**<:children:908181688658563093> Pez Chirlen:** 0')}
-    inventario.extract(`854572979353813032.${message.author.id}.inventarioc`, `**<:children:908181688658563093> Pez Chirlen:** ${p2}`)
-    inventario.sumar(`854572979353813032.${message.author.id}.comida.pez4`, `${xx}` === '1'?pez2*2:pez2)
-    let p22 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez4`)
-    inventario.push(`854572979353813032.${message.author.id}.inventarioc`, `**<:children:908181688658563093> Pez Chirlen:** ${p22}`)
-   
-    
-  return 
-  }
-  message.channel.send(`**${name}**, atrapaste +**${`${xx}` === '1'?pez1*2:pez1} ${pez1 > 1?' peces asfur <:emoji_1:907978099436711936>':' pez asfur <:emoji_1:907978099436711936>'}**`);
-    let p2 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez3`)
-    if(p2 === 0){inventario.push(`854572979353813032.${message.author.id}.inventarioc`, '**<:emoji_1:907978099436711936> Pez Asfur:** 0')}
-    inventario.extract(`854572979353813032.${message.author.id}.inventarioc`, `**<:emoji_1:907978099436711936> Pez Asfur:** ${p2}`)
-    inventario.sumar(`854572979353813032.${message.author.id}.comida.pez3`, `${xx}` === '1'?pez1*2:pez1)
-    let p22 = await inventario.obtener(`854572979353813032.${message.author.id}.comida.pez3`)
-    inventario.push(`854572979353813032.${message.author.id}.inventarioc`, `**<:emoji_1:907978099436711936> Pez Asfur:** ${p22}`)
-   
-  
- 
-
-  //misiones
-
-  let tiee = await misiones.obtener(`854572979353813032.${message.author.id}.misiones.tiene`)
-  let id = await misiones.obtener(`854572979353813032.${message.author.id}.misiones.idm`)
-  if(tiee === 0){return}
-
-  if(id === 2){
-    let pr = await misiones.obtener(`854572979353813032.${message.author.id}.misiones.pr`)
-    if(pr >= 5){return}
-    misiones.sumar(`854572979353813032.${message.author.id}.misiones.pr`, fush)
-  
-}
-}
-//area4
-if(area === '4'){
+if(area === '4'){area4(message, xx, name, tiene, n, plus, p, suerte)}
+//area5
+if(area === '5'){
  
   let pez1 = Math.floor(Math.random() * 6) + 1 + plus *n
   let pez2 = Math.floor(Math.random() * 2) + 1 + p*n
