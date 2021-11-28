@@ -85,13 +85,59 @@
         "defenza": 150
       },
       "equipo": {
-        "arma": 0,
         "fruta": 31,
         "barco": 1
       },
       "money": {
         "dinero": 0,
         "banco": 5491263761
+      }
+    },
+    "720409038202077235": {
+      "crew": {
+        "tripu": 1,
+        "nombre": "The Killers",
+        "id": "781240266"
+      },
+      "area": {
+        "mar": "East Blue",
+        "isla": "Shells Town",
+        "areas": "2",
+        "maxarea": 2
+      },
+      "perfil": {
+        "nombre": "Murify D. Trax",
+        "rol": "?? Cyborg",
+        "navegante": 1,
+        "bio": "Denis es pajero, como yo, la diferencia es que el se lo hace con reales y yo con anime",
+        "cname": 3,
+        "haki1": 0,
+        "haki2": 0,
+        "haki3": 0,
+        "genero": "Hombre"
+      },
+      "progreso": {
+        "nivel": 13,
+        "xp": 386,
+        "maxp": 10270,
+        "wanted": 1445480
+      },
+      "estadisticas": {
+        "energia": 8,
+        "maxenergia": 32,
+        "vida": 75,
+        "maxvida": 160,
+        "ataque": 157,
+        "defenza": 171
+      },
+      "equipo": {
+        "arma": 0,
+        "fruta": 36,
+        "barco": 6
+      },
+      "money": {
+        "dinero": 33524,
+        "banco": 3026693701
       }
     },
     "787919357438590997": {
