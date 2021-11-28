@@ -328,52 +328,5 @@
         "banco": 40609378252
       }
     },
-    "720409038202077235": {
-      "crew": {
-        "tripu": 0,
-        "nombre": "",
-        "id": ""
-      },
-      "area": {
-        "mar": "West Blue",
-        "isla": "Jumpfoot",
-        "areas": "1",
-        "maxarea": 1
-      },
-      "perfil": {
-        "nombre": "Murify D. Trax",
-        "rol": "🤖 Cyborg",
-        "navegante": "1",
-        "bio": "Sin Biografia",
-        "cname": 0,
-        "haki1": 0,
-        "haki2": 0,
-        "haki3": 0,
-        "genero": "Hombre"
-      },
-      "progreso": {
-        "nivel": 1,
-        "xp": 0,
-        "maxp": 180,
-        "wanted": 0
-      },
-      "estadisticas": {
-        "energia": 20,
-        "maxenergia": 20,
-        "vida": 100,
-        "maxvida": 100,
-        "ataque": 0,
-        "defenza": 0
-      },
-      "equipo": {
-        "arma": 0,
-        "fruta": 0,
-        "barco": 0
-      },
-      "money": {
-        "dinero": 10000,
-        "banco": 0
-      }
-    }
   }
 }
