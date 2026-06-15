@@ -1,0 +1,9 @@
+[
+    {
+        "id": 1015,
+        "name": "Boleto de Lotería",
+        "description": "Un boleto para participar en la lotería diaria. ¡Buena suerte!",
+        "emoji": "<:lottery_ticket:907114454108491806>",
+        "value": 1000
+    }
+]

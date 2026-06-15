@@ -32,6 +32,13 @@
         "name": "Espadachin",
         "health": 5,
         "atk": 2,
-        "def": 3
+        "def": 4
+    },
+    {
+        "id": 6,
+        "name": "Doctor",
+        "health": 15,
+        "atk": 2,
+        "def": 2
     }
 ]
