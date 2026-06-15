@@ -21,10 +21,10 @@ module.exports = {
     const types = {
       daily: "Diario",
       weekly: "Semanal",
-      work: "Trabajar",
-      rob: "Robar",
       explore: "Explorar",
-      duel: "Duelo",
+      zarpar: "Zarpar",
+      pescar: "Pescar",
+      entrenar: "Entrenar",
     };
 
     for (const [key, label] of Object.entries(types)) {
