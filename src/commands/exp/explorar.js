@@ -3,13 +3,13 @@ const Profile = require("../../models/Profile");
 const Cooldown = require("../../models/Cooldown");
 const Prison = require("../../models/Prison");
 const Inventory = require("../../models/Inventory");
+const rolesData = require("../../../data/roles.json");
 
 const CREW_MAXP = (n) => 5 * (n ** 5) + 20 * n + 500;
-const ROLE_BONUS = {
-  1: { vd: 15, at: 2, def: 2 }, 2: { vd: 5, at: 2, def: 4 },
-  3: { vd: 5, at: 4, def: 2 }, 4: { vd: 5, at: 2, def: 2 },
-  5: { vd: 5, at: 2, def: 2 }, 6: { vd: 5, at: 6, def: 8 },
-};
+const ROLE_BONUS = {};
+for (const r of rolesData) {
+  ROLE_BONUS[r.id] = { vd: r.health, at: r.atk, def: r.def };
+}
 
 const AREAS = [
   { id: 1, min: 2000, max: 5000, xpMin: 15, xpMax: 30, hpMin: 5, hpMax: 15, hpSubDef: true, enerMin: 1, enerMax: 4, marineChance: 8, marineFue: [20,25,30,10,15,40], marineBo: 50000, marineXp: 100, places: ["Un Bosque","Una Selva","Una Caberna","Un Castillo","Un Barco","Una Casa Embrujada"] },
@@ -75,7 +75,7 @@ module.exports = {
 
     const areaId = Math.min(profile.area.areas || 1, 20);
     const area = AREAS[areaId - 1];
-    const n = profile.role === 5 ? 2 : 1;
+    const n = profile.role === 2 ? 2 : 1;
 
     const min = areaId <= 2 ? area.min * n : area.min;
     const max = areaId <= 2 ? area.max * n : area.max;

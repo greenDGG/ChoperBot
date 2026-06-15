@@ -1,0 +1,5 @@
+[
+  { "id": 1, "name": "Kenbunshoku", "description": "Haki de Observación" },
+  { "id": 2, "name": "Busoshoku", "description": "Haki de Armadura" },
+  { "id": 3, "name": "Haoshoku", "description": "Haki del Rey", "rare": true }
+]

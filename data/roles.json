@@ -2,6 +2,7 @@
     {
         "id": 1,
         "name": "Cyborg",
+        "emoji": "🤖",
         "health": 5,
         "atk": 6,
         "def": 8
@@ -9,6 +10,7 @@
     {
         "id": 2,
         "name": "Navegante",
+        "emoji": "🧭",
         "health": 5,
         "atk": 3,
         "def": 3
@@ -16,6 +18,7 @@
     {
         "id": 3,
         "name": "Tirador",
+        "emoji": "🔫",
         "health": 5,
         "atk": 4,
         "def": 2
@@ -23,6 +26,7 @@
     {
         "id": 4,
         "name": "Arqueologo",
+        "emoji": "🗺",
         "health": 5,
         "atk": 2,
         "def": 2
@@ -30,6 +34,7 @@
     {
         "id": 5,
         "name": "Espadachin",
+        "emoji": "⚔️",
         "health": 5,
         "atk": 2,
         "def": 4
@@ -37,6 +42,7 @@
     {
         "id": 6,
         "name": "Doctor",
+        "emoji": "⚕️",
         "health": 15,
         "atk": 2,
         "def": 2

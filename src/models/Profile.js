@@ -14,7 +14,7 @@ const profileSchema = new mongoose.Schema({
   role: { type: Number, default: 0 },
   bank: {
     deposited: { type: Number, default: 0 },
-    cash: { type: Number, default: 0 },
+    cash: { type: Number, default: 10000 },
   },
   haki: [{
     id: { type: Number, default: 1 },

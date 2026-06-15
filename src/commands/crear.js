@@ -2,13 +2,21 @@ const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, ComponentTyp
 const Profile = require("../models/Profile");
 const Inventory = require("../models/Inventory");
 const Cooldown = require("../models/Cooldown");
+const islas = require("../../data/islas.json");
+const rolesData = require("../../data/roles.json");
+const hakiData = require("../../data/haki.json");
+
+const roleMap = {};
+for (const r of rolesData) {
+  roleMap[r.name.toLowerCase()] = r.id;
+}
 
 module.exports = {
   name: "crear",
   alias: ["start"],
   description: "Crea tu perfil de pirata para comenzar la aventura",
   options: [
-    { name: 'nombre', description: 'Nombre de tu personaje', type: 3, required: false },
+    { name: 'nombre', description: 'Nombre de tu personaje', type: 3, required: true },
   ],
   async execute(client, messageOrInteraction) {
     const isSlash = messageOrInteraction.isChatInputCommand?.();
@@ -20,13 +28,10 @@ module.exports = {
       nombre = messageOrInteraction.options.getString('nombre');
       const existing = await Profile.findOne({ id: author.id });
       if (existing) {
-        const embed = new EmbedBuilder()
-          .setDescription("Ya Tienes Un Perfil Creado.")
-          .setColor(0x00FF00);
-        return messageOrInteraction.reply({ embeds: [embed], ephemeral: true });
+        return messageOrInteraction.reply({ embeds: [new EmbedBuilder().setDescription("Ya Tienes Un Perfil Creado.").setColor(0x00FF00)], ephemeral: true });
       }
       if (!nombre) {
-        return messageOrInteraction.reply({ content: 'Necesitas decir un nombre. Usa `/crear nombre: <nombre>`', ephemeral: true });
+        return messageOrInteraction.reply({ content: 'Necesitas decir un nombre.', ephemeral: true });
       }
       await messageOrInteraction.deferReply();
       const roleEmbed = buildRoleEmbed(nombre);
@@ -40,17 +45,10 @@ module.exports = {
       nombre = args.join(' ');
       const existing = await Profile.findOne({ id: author.id });
       if (existing) {
-        const embed = new EmbedBuilder()
-          .setDescription("Ya Tienes Un Perfil Creado.")
-          .setColor(0x00FF00);
-        return channel.send({ embeds: [embed] });
+        return channel.send({ embeds: [new EmbedBuilder().setDescription("Ya Tienes Un Perfil Creado.").setColor(0x00FF00)] });
       }
       if (!nombre) {
-        const embed = new EmbedBuilder()
-          .setDescription(`${author}, para crear tu perfil necesito que me digas un nombre para el perfil.`)
-          .setFooter({ text: "[op!crear {nombre}]" })
-          .setColor(0x00FF00);
-        return channel.send({ embeds: [embed] });
+        return channel.send({ embeds: [new EmbedBuilder().setDescription(`${author}, para crear tu perfil necesito que me digas un nombre para el perfil.`).setFooter({ text: "[op!crear {nombre}]" }).setColor(0x00FF00)] });
       }
       const roleEmbed = buildRoleEmbed(nombre);
       const { row1, row2 } = buildRoleRows();
@@ -66,7 +64,7 @@ module.exports = {
 
     roleCollector.on('collect', async (i) => {
       await i.deferUpdate();
-      const roleMap = { doctor: 1, espadachin: 2, tirador: 3, arqueologo: 4, navegante: 5, cyborg: 6 };
+
       const rol = roleMap[i.customId] || 0;
 
       const hak = Math.floor(Math.random() * 100);
@@ -76,6 +74,8 @@ module.exports = {
       ];
       if (hak <= 3) haki.push({ id: 3, level: 1, xp: 0 });
 
+      const selected = islas[Math.floor(Math.random() * islas.length)];
+
       const inventory = await Inventory.create({ id: author.id });
       const cooldown = await Cooldown.create({ id: author.id });
 
@@ -84,9 +84,8 @@ module.exports = {
         name: nombre,
         role: rol,
         inventory: inventory.id,
+        area: { mar: selected.mar, isla: selected.isla, areas: 1, maxarea: 1 },
         haki: haki,
-        stats: { energy: { current: 20, max: 20 }, health: { current: 100, max: 100 }, atk: 0, def: 0 },
-        bank: { deposited: 0, cash: 10000 },
       });
 
       const embed = new EmbedBuilder()
