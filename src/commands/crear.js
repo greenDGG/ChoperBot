@@ -87,7 +87,7 @@ module.exports = {
         name: nombre,
         role: rol,
         inventory: inventory.id,
-        area: { mar: marName, isla: island.name, areas: island.area, maxarea: island.area },
+        area: { mar: marName, isla: island.name, areas: 1, maxarea: 1 },
         haki: haki,
       });
 
