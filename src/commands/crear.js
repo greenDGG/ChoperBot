@@ -74,7 +74,10 @@ module.exports = {
       ];
       if (hak <= 3) haki.push({ id: 3, level: 1, xp: 0 });
 
-      const selected = islas[Math.floor(Math.random() * islas.length)];
+      const marKeys = Object.keys(islas);
+      const marKey = marKeys[Math.floor(Math.random() * marKeys.length)];
+      const marName = marKey.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+      const island = islas[marKey][Math.floor(Math.random() * islas[marKey].length)];
 
       const inventory = await Inventory.create({ id: author.id });
       const cooldown = await Cooldown.create({ id: author.id });
@@ -84,7 +87,7 @@ module.exports = {
         name: nombre,
         role: rol,
         inventory: inventory.id,
-        area: { mar: selected.mar, isla: selected.isla, areas: 1, maxarea: 1 },
+        area: { mar: marName, isla: island.name, areas: island.area, maxarea: island.area },
         haki: haki,
       });
 
