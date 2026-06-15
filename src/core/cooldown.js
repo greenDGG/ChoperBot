@@ -1,7 +1,9 @@
 const Lottery = require("../models/Lottery");
 const Profile = require("../models/Profile");
+const Inventory = require("../models/Inventory");
 
 const LOTTERY_HOUR = 16;
+const LOTTERY_TICKET_ID = 1015;
 
 async function checkLottery() {
   const now = new Date();
@@ -22,6 +24,9 @@ async function checkLottery() {
     winner.bank.cash += prize;
     await winner.save();
   }
+  for (const participantId of lottery.participants) {
+    await removeAllTickets(participantId);
+  }
 
   lottery.lastWinners.unshift({ id: winnerId, amount: prize });
   if (lottery.lastWinners.length > 10) lottery.lastWinners.pop();
@@ -36,4 +41,14 @@ async function cdFunc(client) {
   setInterval(checkLottery, 60000);
 }
 
+async function removeAllTickets(userId) {
+  const inventory = await Inventory.findOne({ id: userId });
+  if (!inventory) return;
+
+  const tickets = inventory.items.filter(i => i.id === LOTTERY_TICKET_ID);
+  if (tickets.length === 0) return;
+
+  inventory.items = inventory.items.filter(i => i.id !== LOTTERY_TICKET_ID);
+  await inventory.save();
+}
 module.exports = { cdFunc };
