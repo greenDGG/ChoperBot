@@ -1,5 +1,14 @@
 const { EmbedBuilder } = require("discord.js");
+const Profile = require("../../models/Profile");
 const Cooldown = require("../../models/Cooldown");
+
+function formatRemaining(ms) {
+  if (ms <= 0) return "✅";
+  const h = Math.floor(ms / 3600000);
+  const m = Math.floor((ms % 3600000) / 60000);
+  if (h > 0) return `<:reloj1:911308916779016222> (**${h}h ${m}m**)`;
+  return `<:reloj1:911308916779016222> (**${m}m**)`;
+}
 
 module.exports = {
   name: "cooldown",
@@ -9,37 +18,37 @@ module.exports = {
     const isSlash = messageOrInteraction.isChatInputCommand?.();
     const author = messageOrInteraction.author || messageOrInteraction.user;
 
-    const cd = await Cooldown.findOne({ id: author.id });
-    if (!cd) {
-      const reply = "No tienes cooldowns registrados.";
-      if (isSlash) return messageOrInteraction.editReply({ content: reply });
-      return messageOrInteraction.channel.send(reply);
-    }
+    const profile = await Profile.findOne({ id: author.id });
+    const name = profile ? profile.name : author.username;
 
-    const fields = [];
+    let cd = await Cooldown.findOne({ id: author.id });
+    if (!cd) cd = await Cooldown.create({ id: author.id });
+
     const now = Date.now();
-    const types = {
-      daily: "Diario",
-      weekly: "Semanal",
-      explore: "Explorar",
-      sail: "Zarpar",
-      fish: "Pescar",
-      train: "Entrenar",
-    };
+    const daily = formatRemaining(cd.daily ? cd.daily - now : 0);
+    const weekly = formatRemaining(cd.weekly ? cd.weekly - now : 0);
+    const explore = formatRemaining(cd.explore ? cd.explore - now : 0);
+    const sail = formatRemaining(cd.sail ? cd.sail - now : 0);
+    const fish = formatRemaining(cd.fish ? cd.fish - now : 0);
+    const train = formatRemaining(cd.train ? cd.train - now : 0);
 
-    for (const [key, label] of Object.entries(types)) {
-      const remaining = cd[key] ? cd[key] - now : 0;
-      if (remaining > 0) {
-        const h = Math.floor(remaining / 3600000);
-        const m = Math.floor((remaining % 3600000) / 60000);
-        const s = Math.floor((remaining % 60000) / 1000);
-        fields.push({ name: label, value: `${h}h ${m}m ${s}s`, inline: true });
-      } else {
-        fields.push({ name: label, value: "Listo", inline: true });
-      }
-    }
-
-    const embed = new EmbedBuilder().setTitle("Cooldowns").addFields(fields).setColor(0x00aeff);
+    const embed = new EmbedBuilder()
+      .setAuthor({ name: `${name} Cooldowns`, iconURL: author.displayAvatarURL() })
+      .addFields(
+        {
+          name: "🎁 Recompensas 🎁",
+          value: `${daily} --- **\`Diario\`**\n${weekly} --- **\`Semanal\`**`
+        },
+        {
+          name: "🗡️ Experiencia 🗡️",
+          value: `${explore} --- **\`Explorar\`**\n${sail} --- **\`Zarpar\`**\n✅ --- **\`Duelo\`**`
+        },
+        {
+          name: "🌟 Progresos 🌟",
+          value: `${fish} --- **\`Pescar\`**\n${train} --- **\`Entrenar\`**`
+        }
+      )
+      .setColor("Random");
 
     if (isSlash) return messageOrInteraction.editReply({ embeds: [embed] });
     messageOrInteraction.channel.send({ embeds: [embed] });
