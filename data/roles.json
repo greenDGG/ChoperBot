@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "Cyborg",
+        "health": 5,
+        "atk": 6,
+        "def": 8
+    },
+    {
+        "id": 2,
+        "name": "Navegante",
+        "health": 5,
+        "atk": 3,
+        "def": 3
+    },
+    {
+        "id": 3,
+        "name": "Tirador",
+        "health": 5,
+        "atk": 4,
+        "def": 2
+    },
+    {
+        "id": 4,
+        "name": "Arqueologo",
+        "health": 5,
+        "atk": 2,
+        "def": 2
+    },
+    {
+        "id": 5,
+        "name": "Espadachin",
+        "health": 5,
+        "atk": 2,
+        "def": 3
+    }
+]

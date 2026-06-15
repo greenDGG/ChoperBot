@@ -20,7 +20,7 @@ module.exports = {
       .setTitle(`Saldo de ${profile.name}`)
       .addFields(
         { name: "Efectivo", value: `${profile.bank.cash.toLocaleString()} <:berri:907114454108491806>`, inline: true },
-        { name: "Banco", value: `${profile.bank.bank.toLocaleString()} <:berri:907114454108491806>`, inline: true }
+        { name: "Banco", value: `${profile.bank.deposited.toLocaleString()} <:berri:907114454108491806>`, inline: true }
       )
       .setColor(0x00aeff);
 
