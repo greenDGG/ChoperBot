@@ -25,12 +25,12 @@ module.exports = {
     if (!cd) cd = await Cooldown.create({ id: author.id });
 
     const now = Date.now();
-    const daily = formatRemaining(cd.daily ? cd.daily - now : 0);
-    const weekly = formatRemaining(cd.weekly ? cd.weekly - now : 0);
-    const explore = formatRemaining(cd.explore ? cd.explore - now : 0);
-    const sail = formatRemaining(cd.sail ? cd.sail - now : 0);
-    const fish = formatRemaining(cd.fish ? cd.fish - now : 0);
-    const train = formatRemaining(cd.train ? cd.train - now : 0);
+    const daily = formatRemaining(cd.daily ? cd.daily + 86400000 - now : 0);
+    const weekly = formatRemaining(cd.weekly ? cd.weekly + 604800000 - now : 0);
+    const explore = formatRemaining(cd.explore ? cd.explore + 30000 - now : 0);
+    const sail = formatRemaining(cd.sail ? cd.sail + 60000 - now : 0);
+    const fish = formatRemaining(cd.fish ? cd.fish + 150000 - now : 0);
+    const train = formatRemaining(cd.train ? cd.train + 43200000 - now : 0);
 
     const embed = new EmbedBuilder()
       .setAuthor({ name: `${name} Cooldowns`, iconURL: author.displayAvatarURL() })
