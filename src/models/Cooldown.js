@@ -5,9 +5,9 @@ const cooldownSchema = new mongoose.Schema({
   daily: { type: Number, default: 0 },
   weekly: { type: Number, default: 0 },
   explore: { type: Number, default: 0 },
-  zarpar: { type: Number, default: 0 },
-  pescar: { type: Number, default: 0 },
-  entrenar: { type: Number, default: 0 },
+  sail: { type: Number, default: 0 },
+  fish: { type: Number, default: 0 },
+  train: { type: Number, default: 0 },
 });
 
 module.exports = mongoose.model("Cooldown", cooldownSchema);

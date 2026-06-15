@@ -22,9 +22,9 @@ module.exports = {
       daily: "Diario",
       weekly: "Semanal",
       explore: "Explorar",
-      zarpar: "Zarpar",
-      pescar: "Pescar",
-      entrenar: "Entrenar",
+      sail: "Zarpar",
+      fish: "Pescar",
+      train: "Entrenar",
     };
 
     for (const [key, label] of Object.entries(types)) {
