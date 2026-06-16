@@ -1,7 +1,11 @@
 const { EmbedBuilder } = require("discord.js");
 const Profile = require("../../models/Profile");
+const rolesData = require("../../../data/roles.json");
 
-const ROLES = { 1: "<:SimboloHospital:901623144631128135> Doctor", 2: "<:espadachin:906596039535001601> Espadachin", 3: "🔫 Tirador", 4: "🔍 Arqueologo", 5: "🧭 Navegante", 6: "🤖 Cyborg" };
+const ROLES = {};
+for (const r of rolesData) {
+  ROLES[r.id] = `${r.emoji} ${r.name}`;
+}
 const SHIPS = { 0: "Sin Barco", 1: "Balsa", 2: "Fusta", 3: "Goleta", 4: "Coca", 5: "Carabela", 6: "Bergantín", 7: "Carraca", 8: "Nao", 9: "Galera", 10: "Balandra", 11: "Galeón", 12: "Corbeta", 13: "Navío" };
 const GUNS = { 0: "Sin Arma", 1: "Kabuto", 2: "Kogatana" };
 const FRUITS = { 0: "Sin Fruta", 1: "<:gomugomu:882282753519939584> Gomu Gomu", 2: "<:meramera:882404943716290561> Mera Mera", 3: "<:guragura:885730778800082954> Gura Gura", 4: "<:opeope:885731605673549834> Ope Ope", 5: "<:hitohito:885732137016385566> Hito Hito", 6: "<:barabara:882284030136025119> Bara Bara", 7: "<:yamiyami:882287207149346866> Yami Yami" };

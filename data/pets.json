@@ -1,0 +1,7 @@
+[
+  { "id": 1, "name": "Pato", "emoji": "🦆", "description": "Un pato leal que te sigue a todas partes", "baseAtk": 2, "baseDef": 1, "baseHp": 50, "xpPerLevel": 200, "img": "" },
+  { "id": 2, "name": "Zorro", "emoji": "🦊", "description": "Un zorro astuto con grandes reflejos", "baseAtk": 4, "baseDef": 2, "baseHp": 40, "xpPerLevel": 250, "img": "" },
+  { "id": 3, "name": "Lobo", "emoji": "🐺", "description": "Un lobo feroz que protege a su dueño", "baseAtk": 5, "baseDef": 3, "baseHp": 60, "xpPerLevel": 300, "img": "" },
+  { "id": 4, "name": "Tigre", "emoji": "🐯", "description": "Un tigre majestuoso y poderoso", "baseAtk": 7, "baseDef": 4, "baseHp": 70, "xpPerLevel": 400, "img": "" },
+  { "id": 5, "name": "Fénix", "emoji": "🦅", "description": "Un ave mítica que renace de las cenizas", "baseAtk": 6, "baseDef": 5, "baseHp": 80, "xpPerLevel": 500, "img": "" }
+]

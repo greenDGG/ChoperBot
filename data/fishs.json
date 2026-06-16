@@ -1,0 +1,17 @@
+[
+  { "id": "pez_azul", "name": "Pez Azul", "emoji": "🐟", "rarity": "common", "value": 500, "xp": 15, "areas": [1, 2] },
+  { "id": "pez_payaso", "name": "Pez Payaso", "emoji": "🐠", "rarity": "common", "value": 200, "xp": 10, "areas": [1, 2, 3] },
+  { "id": "sardina", "name": "Sardina", "emoji": "🐟", "rarity": "common", "value": 150, "xp": 10, "areas": [1, 2, 3] },
+  { "id": "pez_chirlen", "name": "Pez Chirlen", "emoji": "🐟", "rarity": "uncommon", "value": 800, "xp": 25, "areas": [2, 3] },
+  { "id": "pez_globo", "name": "Pez Globo", "emoji": "🐡", "rarity": "uncommon", "value": 350, "xp": 25, "areas": [1, 2, 3] },
+  { "id": "pez_espada", "name": "Pez Espada", "emoji": "🐟", "rarity": "uncommon", "value": 1000, "xp": 35, "areas": [2, 3, 4] },
+  { "id": "atun", "name": "Atún", "emoji": "🐟", "rarity": "uncommon", "value": 1200, "xp": 30, "areas": [2, 3] },
+  { "id": "pez_dorado", "name": "Pez Dorado", "emoji": "🐠", "rarity": "rare", "value": 2000, "xp": 60, "areas": [3, 4, 5] },
+  { "id": "pez_asfur", "name": "Pez Asfur", "emoji": "🐟", "rarity": "rare", "value": 5000, "xp": 80, "areas": [3, 4, 5] },
+  { "id": "caballito_mar", "name": "Caballito de Mar", "emoji": "🦑", "rarity": "rare", "value": 1500, "xp": 50, "areas": [3, 4] },
+  { "id": "pulpo", "name": "Pulpo", "emoji": "🐙", "rarity": "rare", "value": 1800, "xp": 55, "areas": [4, 5] },
+  { "id": "tiburon", "name": "Tiburón", "emoji": "🦈", "rarity": "epic", "value": 5000, "xp": 100, "areas": [4, 5] },
+  { "id": "ballena", "name": "Ballena", "emoji": "🐋", "rarity": "epic", "value": 8000, "xp": 150, "areas": [5] },
+  { "id": "pez_lunar", "name": "Pez Lunar", "emoji": "🌙", "rarity": "legendary", "value": 15000, "xp": 300, "areas": [5] },
+  { "id": "rey_mares", "name": "Rey de los Mares", "emoji": "🐉", "rarity": "legendary", "value": 35000, "xp": 500, "areas": [5] }
+]

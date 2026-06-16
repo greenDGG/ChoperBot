@@ -14,6 +14,8 @@ const crewSchema = new mongoose.Schema({
   maxPlayers: { type: Number, default: 10 },
   ownerId: { type: String, default: '' },
   shipId: { type: String, default: '' },
+  resources: { type: Map, of: Number, default: {} },
+  totalResources: { type: Number, default: 0 },
 }, { timestamps: true });
 
 module.exports = mongoose.model('Crew', crewSchema);

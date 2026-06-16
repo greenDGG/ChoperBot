@@ -1,0 +1,16 @@
+[
+  { "id": 0, "name": "Sin Barco", "emoji": "", "capacity": 0, "speed": 0, "price": 0 },
+  { "id": 1, "name": "Balsa", "emoji": "🪵", "capacity": 2, "speed": 1, "price": 0 },
+  { "id": 2, "name": "Fusta", "emoji": "⛵", "capacity": 3, "speed": 2, "price": 5000 },
+  { "id": 3, "name": "Goleta", "emoji": "⛵", "capacity": 4, "speed": 3, "price": 15000 },
+  { "id": 4, "name": "Coca", "emoji": "🚢", "capacity": 5, "speed": 3, "price": 30000 },
+  { "id": 5, "name": "Carabela", "emoji": "🚢", "capacity": 6, "speed": 4, "price": 50000 },
+  { "id": 6, "name": "Bergantín", "emoji": "⛴️", "capacity": 8, "speed": 4, "price": 80000 },
+  { "id": 7, "name": "Carraca", "emoji": "⛴️", "capacity": 10, "speed": 5, "price": 120000 },
+  { "id": 8, "name": "Nao", "emoji": "🛳️", "capacity": 12, "speed": 5, "price": 180000 },
+  { "id": 9, "name": "Galera", "emoji": "🛳️", "capacity": 15, "speed": 6, "price": 250000 },
+  { "id": 10, "name": "Balandra", "emoji": "⚓", "capacity": 18, "speed": 6, "price": 350000 },
+  { "id": 11, "name": "Galeón", "emoji": "⚓", "capacity": 20, "speed": 7, "price": 500000 },
+  { "id": 12, "name": "Corbeta", "emoji": "🛥️", "capacity": 25, "speed": 8, "price": 750000 },
+  { "id": 13, "name": "Navío", "emoji": "🛥️", "capacity": 30, "speed": 10, "price": 1000000 }
+]

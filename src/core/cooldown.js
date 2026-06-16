@@ -45,10 +45,10 @@ async function removeAllTickets(userId) {
   const inventory = await Inventory.findOne({ id: userId });
   if (!inventory) return;
 
-  const tickets = inventory.items.filter(i => i.id === LOTTERY_TICKET_ID);
-  if (tickets.length === 0) return;
+  const tickets = inventory.items.get(String(LOTTERY_TICKET_ID));
+  if (!tickets) return;
 
-  inventory.items = inventory.items.filter(i => i.id !== LOTTERY_TICKET_ID);
+  inventory.items.delete(String(LOTTERY_TICKET_ID));
   await inventory.save();
 }
 module.exports = { cdFunc };

@@ -89,6 +89,7 @@ module.exports = {
         inventory: inventory.id,
         area: { mar: marName, isla: island.name, areas: 1, maxarea: 1 },
         haki: haki,
+        equipped: { ship: 1 },
       });
 
       const embed = new EmbedBuilder()

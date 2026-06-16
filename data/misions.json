@@ -1,0 +1,16 @@
+[
+  { "id": 1, "area": 1, "name": "Explorar la Selva", "type": "explorar", "target": 2, "rewardCash": 5000, "rewardXp": 100, "description": "Explora **`La Selva`** 2 veces" },
+  { "id": 2, "area": 1, "name": "Pescados Azules", "type": "pescar", "target": 5, "rewardCash": 5000, "rewardXp": 100, "description": "Pescar **`5 Pescados`** 🐟 Azules" },
+  { "id": 3, "area": 1, "name": "Zarpar", "type": "zarpar", "target": 3, "rewardCash": 5000, "rewardXp": 100, "description": "Ir a `Zarpar` 3 Veces" },
+  { "id": 4, "area": 1, "name": "Duelo", "type": "duelo", "target": 1, "rewardCash": 5000, "rewardXp": 100, "description": "Ten un **`duelo`**" },
+  { "id": 5, "area": 2, "name": "Cazar Monstruos", "type": "explorar", "target": 3, "rewardCash": 8000, "rewardXp": 150, "description": "Explora **`el Pantano`** 3 veces" },
+  { "id": 6, "area": 2, "name": "Pez Espada", "type": "pescar", "target": 3, "rewardCash": 8000, "rewardXp": 150, "description": "Pescar **`3 Peces Espada`**" },
+  { "id": 7, "area": 2, "name": "Navegar", "type": "zarpar", "target": 5, "rewardCash": 8000, "rewardXp": 150, "description": "Ir a `Zarpar` 5 Veces" },
+  { "id": 8, "area": 3, "name": "Ruinas Antiguas", "type": "explorar", "target": 4, "rewardCash": 12000, "rewardXp": 200, "description": "Explora **`las Ruinas`** 4 veces" },
+  { "id": 9, "area": 3, "name": "Tesoro Hundido", "type": "pescar", "target": 4, "rewardCash": 12000, "rewardXp": 200, "description": "Pescar **`4 Tesoros Hundidos`**" },
+  { "id": 10, "area": 3, "name": "Marino en Fuga", "type": "duelo", "target": 2, "rewardCash": 12000, "rewardXp": 200, "description": "Gana **`2 Duelos`**" },
+  { "id": 11, "area": 4, "name": "Tormenta", "type": "zarpar", "target": 5, "rewardCash": 18000, "rewardXp": 300, "description": "Zarpa **`5 Veces`** en aguas peligrosas" },
+  { "id": 12, "area": 4, "name": "Cazador de Marines", "type": "explorar", "target": 5, "rewardCash": 20000, "rewardXp": 350, "description": "Enfrenta **`5 Marines`** explorando" },
+  { "id": 13, "area": 5, "name": "El Gran Pez", "type": "pescar", "target": 5, "rewardCash": 25000, "rewardXp": 400, "description": "Pescar **`5 Peces Legendarios`**" },
+  { "id": 14, "area": 5, "name": "Maestro del Duelo", "type": "duelo", "target": 3, "rewardCash": 30000, "rewardXp": 500, "description": "Gana **`3 Duelos`** seguidos" }
+]
